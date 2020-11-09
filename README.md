@@ -1,5 +1,5 @@
 # Any fans of phages?
-Running phanotate, annotating what we get, and comparing it to those pesky bacterial annotaters.
+Running phanotate, annotating what we get, and comparing it to those pesky bacterial annotators.
 
 ## Dependencies 
 Requires the pandas, BioPython, argParse, subprocess, os, and sys libraries to be accessible in the environment you run in. It would be best to create a separate ennvironment for this. You can do so by first ensuring you have miniconda install in your device, then running the following code:
