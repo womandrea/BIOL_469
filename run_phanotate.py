@@ -17,6 +17,7 @@ Expected analysis
 - BLASTing 
 - other stuff???
 '''
+phanotate_file_path = "/home/andrea_gabriela_alexei_gmail_com/PHANOTATE/phanotate.py"
 
 class ORF(object):
     """
@@ -70,7 +71,7 @@ class Identification(object):
         Effects: Updates self to include ORF file path from 
                  Phanotate. Writes the output of Phanotate to a file.
         """
-        cmd = ["python","/home/andrea_gabriela_alexei_gmail_com/PHANOTATE/phanotate.py",  self.input_file]
+        cmd = ["python", phanotate_file_path,  self.input_file]
         output_reading = subprocess.Popen(cmd,stdout=subprocess.PIPE)
         output_file_path = self.out_file
         output_file = open(output_file_path, "w")
