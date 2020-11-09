@@ -6,6 +6,7 @@ Requires the pandas, BioPython, argParse, subprocess, os, and sys libraries to b
 
 ```{bash}
 conda create -n ENVIRONMENT_NAME
+conda activate ENVIRONMENT_NAME
 conda install pandas
 conda install -c conda-forge/label/cf202003 argparse
 conda install -c conda-forge biopython
