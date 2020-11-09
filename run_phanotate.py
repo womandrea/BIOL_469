@@ -19,7 +19,10 @@ Expected analysis
 '''
 
 class ORF(object):
-    def __init__(self): 
+    """
+    A class representing each potential open reading frame detected by Phanotate.
+    """
+    def __init__(self):
         self.frame = None # True if positive, False if negative
         self.start = 0 # beginning position
         self.end = 0 # end position (+1 to the val for substring stealing!
@@ -28,6 +31,10 @@ class ORF(object):
 
 
 class Identification(object):
+    """
+    A class whose operations contribute to the identification of the 
+    open reading frames within the fasta file input to Phanotate.
+    """
     def __init__(self, args):
         self.input_file = args.input 
         if args.output_dir:
@@ -48,7 +55,7 @@ class Identification(object):
             data.append(new_line)
             counter += 1
         
-        orf_file_output = "/".join(self.out_file.split("/")[:-1]) + "/"  + "phannotate_output_ORF.fasta"
+        orf_file_output = "/".join(self.out_file.split("/")[:-1]) + "/"  + "phanotate_output_ORF.fasta"
         with open(orf_file_output, "w") as fasta:
             for i in dic:
                 fasta.writelines(data)
@@ -110,7 +117,6 @@ class Identification(object):
     
     def store_ORF(self):
         """
-
         Stores the information from the output into a dictionary. Will be called by retreive_ORFs to get 
         the necessary information. 
 
